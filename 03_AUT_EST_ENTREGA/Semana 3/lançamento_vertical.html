@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>
+        Atividade lançamento vertical
+    </title>
+
+</head>
+
+<body>
+    <h1 id="text">Escolha o valor da velocidade inicia e descubra a altura máxima e o tempo total de subida</h1>
+
+    <input id="vi" type="velocidade inicial">
+    <input id="cal" type="button" value="calcular">
+    <input id="reset" type="button" value="resetar">
+
+    <script>
+        var num = 0;
+        var oi = function () {
+            num = document.getElementById("vi").value;
+            tempo = num / 10;
+
+            hmax = num ** 2 / (2 * 10);
+            //alert(hmax);
+            //console.log(tempo);
+            document.getElementById("text").innerHTML = "A altura máxima é: " + hmax + " .E o tempo para chegar na altura máxima é: " + tempo;
+        }
+        document.getElementById("cal").onclick = oi;
+
+        var k = 0;
+        var calc = function () {
+            k = document.getElementById("reset").value;
+            document.getElementById("text").innerHTML = "Escolha o valor da velocidade inicia e descubra a altura máxima e o tempo total de subida";
+
+        }
+        document.getElementById("reset").onclick = calc;
+
+
+
+
+    </script>
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
